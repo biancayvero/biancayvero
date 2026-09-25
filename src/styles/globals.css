@@ -1,0 +1,128 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* La paleta base se genera desde el bloque 0 de contenido.js. */
+  --color-border: color-mix(in srgb, var(--border-base) 24%, transparent);
+  --button-hover-start: color-mix(in srgb, var(--color-primary-hover) 85%, var(--shine));
+  --button-hover-end: color-mix(in srgb, var(--button-end) 85%, var(--shine));
+  --focus-color: var(--color-primary);
+
+  --radius-sm: 18px;
+  --radius-md: 26px;
+  --radius-lg: 38px;
+
+  --shadow-sm: 0 16px 38px color-mix(in srgb, var(--shadow-base) 20%, transparent);
+  --shadow-md: 0 24px 60px color-mix(in srgb, var(--shadow-base) 28%, transparent);
+  --shadow-lg: 0 34px 84px color-mix(in srgb, var(--shadow-base) 38%, transparent);
+
+  --font-family-base: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-family-display: Georgia, 'Times New Roman', serif;
+  --line-height-base: 1.6;
+  --font-size: 16px;
+  --h1-size: clamp(2.8rem, 7vw, 5.5rem);
+  --h2-size: clamp(1.8rem, 4vw, 3.2rem);
+  --p-size: clamp(1rem, 1.35vw, 1.08rem);
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--color-primary) 20%, transparent), transparent 32%),
+    radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--color-accent) 18%, transparent), transparent 30%),
+    radial-gradient(circle at 18% 88%, color-mix(in srgb, var(--shine) 8%, transparent), transparent 24%),
+    linear-gradient(180deg, var(--page-top) 0%, var(--color-bg) 46%, var(--page-bottom) 100%);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--shine) 1.5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--shine) 1.5%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, color-mix(in srgb, var(--shadow-base) 60%, transparent), transparent 88%);
+  opacity: 0.6;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  font-family: var(--font-family-display);
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+p {
+  font-size: var(--p-size);
+  line-height: var(--line-height-base);
+  color: var(--color-muted);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size: 15px;
+    --h1-size: clamp(2.45rem, 12vw, 3.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
