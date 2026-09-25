@@ -104,7 +104,7 @@ export const CONTENIDO = {
   galeria: {
     // 11. Etiqueta / 12. Título de la galería
     etiqueta: 'Galería',
-    titulo: 'Algunos de nuestros momentos y aventuras juntas',
+    titulo: 'Nuestras actividades favoritas',
     // Puedes añadir, quitar o reordenar fotos. La primera ocupa el lugar destacado.
     imagenes: [
       // 13. Primera foto: archivo, descripción accesible y texto sobre la foto
