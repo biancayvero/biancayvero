@@ -108,17 +108,17 @@ export const CONTENIDO = {
     // Puedes añadir, quitar o reordenar fotos. La primera ocupa el lugar destacado.
     imagenes: [
       // 13. Primera foto: archivo, descripción accesible y texto sobre la foto
-      { src: '/imagenes/poster-1.jpg', alt: 'Imagen de nuestra galería 1', tone: 'Madrid' },
+      { src: '/imagenes/conversar.png', alt: 'Imagen de nuestra galería 1', tone: 'Conversar' },
       // 14. Segunda foto
-      { src: '/imagenes/poster-2.jpg', alt: 'Imagen de nuestra galería 2', tone: 'Nieve' },
+      { src: '/imagenes/columpiarnos.png', alt: 'Imagen de nuestra galería 2', tone: 'Columpiarnos' },
       // 15. Tercera foto
-      { src: '/imagenes/poster-3.jpg', alt: 'Imagen de nuestra galería 3', tone: 'Montaña' },
+      { src: '/imagenes/besos.png', alt: 'Imagen de nuestra galería 3', tone: 'Besos' },
       // 16. Cuarta foto
-      { src: '/imagenes/poster-4.jpg', alt: 'Imagen de nuestra galería 4', tone: 'Ciudad' },
+      { src: '/imagenes/bailar.png', alt: 'Imagen de nuestra galería 4', tone: 'Bailar' },
       // 17. Quinta foto
-      { src: '/imagenes/poster-5.jpg', alt: 'Imagen de nuestra galería 5', tone: 'Barcelona' },
+      // { src: '/imagenes/poster-5.jpg', alt: 'Imagen de nuestra galería 5', tone: 'Barcelona' },
       // 18. Sexta foto
-      { src: '/imagenes/poster-6.jpg', alt: 'Imagen de nuestra galería 6', tone: 'Parque' },
+      // { src: '/imagenes/poster-6.jpg', alt: 'Imagen de nuestra galería 6', tone: 'Parque' },
     ],
     // 19. Botón bajo la galería
     botonContacto: 'Habla con nosotras por WhatsApp',
